@@ -21,7 +21,7 @@ public class RabbitMQProducer {
     private String routingKey;
 
     public void sendMessage(String message){
-        logger.info(String.format("Producing message -> %s", message));
+        logger.info("Producing message -> {}", message);
         amqpTemplate.convertAndSend(exchange, routingKey, message);
     }
 }
