@@ -11,6 +11,6 @@ public class RabbitMQConsumer {
 
     @RabbitListener(queues="${rabbitmq.queue}")
     public void messageListener(String message) {
-        logger.info(String.format("Consumed message -> %s", message));
+        logger.info("Consumed message -> {}", message);
     }
 }
